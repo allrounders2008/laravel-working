@@ -17,10 +17,10 @@ phases:
 
   build:
     commands:
-      - docker build -t backpack-web .
+      - docker build -t laravel .
 
   post_build:
     commands:
       - echo Building Docker images, pushing to Docker Hub, etc.
-      - docker tag backpack-web:latest 239302956728.dkr.ecr.us-east-1.amazonaws.com/backpack-web:latest
-      - docker push 239302956728.dkr.ecr.us-east-1.amazonaws.com/backpack-web:latest
+      - docker tag laravel:latest 239302956728.dkr.ecr.us-east-1.amazonaws.com/laravel:latest
+      - docker push 239302956728.dkr.ecr.us-east-1.amazonaws.com/laravel:latest
